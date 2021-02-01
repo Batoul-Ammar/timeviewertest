@@ -1,0 +1,141 @@
+<!-- <app-home-sidebar></app-home-sidebar> -->
+<div style="height: 100vh;">
+  test
+</div>
+<mat-drawer-container fullscreen hasBackdrop="false">
+      <div class="header-main">
+
+      <div class="d-flex align-items-center justify-content-space-between d-none d-sm-flex">
+        <img class="notification" src="assets/icon/notification.png" alt="notification"/>
+        <div class="image-container-icons">
+          <img class="image1 user-circle-logged" src="assets/icon/ellipse-1.png" />
+          <img class="image2 user-logged" src=" assets/header/logged-user.png" />
+          
+        </div>
+        <div class="welcome-msg">
+          <span class="welcome">مرحبآ بك</span>&nbsp;
+          <span class="user-name">مالك محمد</span>
+        </div>
+      </div>
+      <div class="">
+        <button mat-icon-button (click)="toggle()">
+          <img *ngIf="!isShowing" src="../../../assets/icon/arrow-right-2.png"/> 
+          <img *ngIf="isShowing" src="../../../assets/icon/arrow-left.png"/> 
+        </button>
+        
+          <span *ngIf="!isShowing" class="header-title">
+            14
+            قائمة الأنتظار
+          </span>
+        
+      </div>
+
+    </div>
+  <mat-drawer #home class="container-sidenav" mode="push">
+    <div class="sidenav-title">
+      <p>
+        14
+        قائمة الأنتظار
+      </p>
+    </div>
+    <ul class="list-unstyled p-0">
+      <li class="d-flex align-items-center justify-content-space-between">
+        <div class="image-container-icons">
+          <img class="image1 user-circle" src="assets/header/user-circle.png" />
+          <img class="image2 user" src=" assets/header/user.png" />
+        </div>
+        <div class="user-container">
+          <div class="last-active">منذ ١٥ دقيقة</div>
+          <div class="user-name">مستخدم 1</div>
+        </div>
+      </li>
+
+      <li class="d-flex align-items-center justify-content-space-between">
+        <div class="image-container-icons">
+          <img class="image1 user-circle" src="assets/header/user-circle.png" />
+          <img class="image2 user" src=" assets/header/user.png" />
+        </div>
+        <div class="user-container">
+          <div class="last-active">منذ ١٢ دقيقة</div>
+          <div class="user-name">مستخدم 2</div>
+        </div>
+      </li>
+
+      <li class="d-flex align-items-center justify-content-space-between">
+        <div class="image-container-icons">
+          <img class="image1 user-circle" src="assets/header/user-circle.png" />
+          <img class="image2 user" src=" assets/header/user.png" />
+        </div>
+        <div class="user-container">
+          <div class="last-active">منذ ١١ دقيقة</div>
+          <div class="user-name">مستخدم 3</div>
+        </div>
+      </li>
+
+      <li class="d-flex align-items-center justify-content-space-between active">
+        <div class="image-container-icons">
+          <img class="image1 user-circle" src="assets/header/user-circle.png" />
+          <img class="image2 user" src=" assets/header/user-active.png" />
+        </div>
+        <div class="user-container">
+          <div class="last-active">منذ ١٠ دقيقة</div>
+          <div class="user-name">مستخدم </div>
+        </div>
+      </li>
+
+      <li class="d-flex align-items-center justify-content-space-between">
+        <div class="image-container-icons">
+          <img class="image1 user-circle" src="assets/header/user-circle.png" />
+          <img class="image2 user" src=" assets/header/user.png" />
+        </div>
+        <div class="user-container">
+          <div class="last-active">منذ ٨ دقيقة</div>
+          <div class="user-name">مستخدم 4</div>
+        </div>
+      </li>
+
+      <li class="d-flex align-items-center justify-content-space-between">
+        <div class="image-container-icons">
+          <img class="image1 user-circle" src="assets/header/user-circle.png" />
+          <img class="image2 user" src=" assets/header/user.png" />
+        </div>
+        <div class="user-container">
+          <div class="last-active">منذ ٥ دقيقة</div>
+          <div class="user-name">مستخدم 5</div>
+        </div>
+      </li>
+
+      <li class="d-flex align-items-center justify-content-space-between">
+        <div class="image-container-icons">
+          <img class="image1 user-circle" src="assets/header/user-circle.png" />
+          <img class="image2 user" src=" assets/header/user.png" />
+        </div>
+        <div class="user-container">
+          <div class="last-active">منذ ٢ دقيقة</div>
+          <div class="user-name">مستخدم 6</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="sidenav-footer">
+      <p>جميع الحقوق محفوظة<br>
+        تايم فيوير © ٢٠١٣ - ٢٠٢٠
+      </p>
+      <div class="sidenav-footer-icons">
+        <img src="assets/header/insta.png" alt="instagram"/>
+        <img src="assets/header/twitter.png" alt="twitter"/>
+        <img src="assets/header/facebook.png" alt="facebook"/>
+      </div>
+    </div>
+
+  </mat-drawer>
+
+  <div>
+
+    <div class="content container-fluid p-0">
+      <app-home-sidebar></app-home-sidebar>
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  </mat-drawer-container>

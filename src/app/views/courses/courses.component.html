@@ -1,0 +1,26 @@
+
+<div class="doctor-profile row">
+    <div class="row">
+        <div class="col-lg-3 col-6" *ngFor="let item of storeItem">
+            <div class="store-img">
+                <img class="main-img courses" [src]="item.path" />
+                <img class="icon-img" [src]="item.icon" />
+                <div class="file-title" *ngIf="item.type !== 'video'">
+                    {{item.type}}
+                </div>
+
+            </div>
+            <div class="item-title">
+                <p class="text-white">
+                    {{item.title}}
+                </p>
+            </div>
+            <div class="item-info courses">
+                <small class="currency">
+                    <span class="price">{{item.price}} </span> دينار كويتي
+                </small>
+            </div>
+        </div>
+    </div>
+
+</div>

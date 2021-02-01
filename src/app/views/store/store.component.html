@@ -1,0 +1,64 @@
+<div class="doctor-profile row">
+    <div class="col-lg-6 order-lg-1 col-12 order-2">
+        <div class="row">
+            <div class="col-lg-4 col-6" *ngFor="let item of storeItem">
+                <div class="store-img" (click)="selectItem(item)">
+                    <img class="main-img" [src]="item.path" />
+                    <img class="icon-img" [src]="item.icon" />
+                    <div class="file-title" *ngIf="item.type !== 'video'">
+                        {{item.type}}
+                    </div>
+
+                </div>
+                <div class="item-title">
+                    <p class="text-white">
+                        {{item.title}}
+                    </p>
+                </div>
+                <div class="item-info">
+                    <small class="currency">
+                        <span class="price">{{item.price}} </span> دينار كويتي
+                    </small>
+                    <small class="downloads">
+                        {{item.download}}
+                        <img class="icon-img" src="assets/icon/enter.png" />
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 order-lg-2 col-12 order-1">
+        <div class="selectedItem">
+            <div *ngIf="selectedItem.type !== 'video';else VIDEO">
+                <img class="main-img" src="assets/store/Rectangle 1049@3x.png" />
+                <img class="icon-img" [src]="selectedItem.icon" />
+                <div class="file-title" *ngIf="selectedItem.type !== 'video'">
+                    {{selectedItem.type}}
+                </div>
+
+                <div class="item-title">
+                    <p class="text-white">{{selectedItem.title}}
+                    </p>
+                </div>
+                <div class="item-info-bottom">
+                    <div class="item-info">
+                        <small class="currency">
+                            <span class="price">{{selectedItem.price}} </span> دينار كويتي
+                        </small>
+                        <small class="downloads">
+                            {{selectedItem.download}}
+                            <img src="assets/icon/enter.png" />
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+
+            <ng-template #VIDEO>
+                <iframe class="doctor-video" height="500" src="https://www.youtube.com/embed/3GA8WBNUnsc"
+                    frameborder="0" allowfullscreen></iframe>
+            </ng-template>
+        </div>
+    </div>
+
+</div>
